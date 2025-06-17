@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-black text-white">
+    <div class="flex h-screen">
+        <div class="w-64 bg-black p-5 flex flex-col">
+            <div class="mb-8">
+                <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="Spotify Logo" class="h-10">
+            </div>
+            
+            <nav class="flex-1">
+                <ul class="space-y-4">
+                    <li>
+                        <a href="#" class="flex items-center text-white hover:text-green-500">
+                            <i class="fas fa-home mr-4"></i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center text-gray-400 hover:text-white">
+                            <i class="fas fa-search mr-4"></i>
+                            <span>Buscar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center text-gray-400 hover:text-white">
+                            <i class="fas fa-book mr-4"></i>
+                            <span>Tu biblioteca</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="mt-8">
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class="flex items-center text-gray-400 hover:text-white">
+                                <div class="bg-gray-400 p-1 mr-4">
+                                    <i class="fas fa-plus text-black"></i>
+                                </div>
+                                <span>Crear lista</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center text-gray-400 hover:text-white">
+                                <div class="bg-gradient-to-br from-purple-600 to-blue-300 p-1 mr-4">
+                                    <i class="fas fa-heart text-white"></i>
+                                </div>
+                                <span>Tus me gusta</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        
+        <div class="flex-1 bg-gradient-to-b from-gray-900 to-black overflow-y-auto">
+            <header class="flex justify-between items-center p-6 bg-gray-900 bg-opacity-30">
+                <div class="flex space-x-4">
+                    <button class="bg-black bg-opacity-40 rounded-full p-1">
+                        <i class="fas fa-chevron-left px-2"></i>
+                    </button>
+                    <button class="bg-black bg-opacity-40 rounded-full p-1">
+                        <i class="fas fa-chevron-right px-2"></i>
+                    </button>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="bg-white text-black font-bold rounded-full px-4 py-1 hover:scale-105 transition">
+                        Actualizar
+                    </button>
+                    <div class="flex items-center bg-black bg-opacity-70 rounded-full p-1 hover:bg-opacity-100 cursor-pointer">
+                        <div class="w-8 h-8 bg-gray-500 rounded-full mr-2"></div>
+                        <span class="font-bold mr-2">Usuario</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+            
+            <main class="p-6">
+                <h1 class="text-2xl font-bold mb-6">Buenos días</h1>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition cursor-pointer group">
+                        <div class="relative mb-4">
+                            <img src="https://i.scdn.co/image/ab67706f00000002ca5a7517156021292e5663a6" alt="Playlist" class="rounded shadow-lg w-full">
+                            <button class="absolute bottom-2 right-2 bg-green-500 rounded-full p-3 opacity-0 group-hover:opacity-100 transition hover:scale-105">
+                                <i class="fas fa-play text-black"></i>
+                            </button>
+                        </div>
+                        <h3 class="font-bold">Título de la lista</h3>
+                        <p class="text-gray-400 text-sm">Descripción de la lista</p>
+                    </div>
+                    
+                    <div class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition cursor-pointer group">
+                        <div class="relative mb-4">
+                            <img src="https://i.scdn.co/image/ab67706f00000002ca5a7517156021292e5663a6" alt="Playlist" class="rounded shadow-lg w-full">
+                            <button class="absolute bottom-2 right-2 bg-green-500 rounded-full p-3 opacity-0 group-hover:opacity-100 transition hover:scale-105">
+                                <i class="fas fa-play text-black"></i>
+                            </button>
+                        </div>
+                        <h3 class="font-bold">Título de la lista</h3>
+                        <p class="text-gray-400 text-sm">Descripción de la lista</p>
+                    </div>
+                    
+                    </div>
+                
+                <h2 class="text-xl font-bold mt-10 mb-4">Escuchado recientemente</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <div class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition cursor-pointer group">
+                        <div class="relative mb-4">
+                            <img src="https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228" alt="Album" class="rounded shadow-lg w-full">
+                            <button class="absolute bottom-2 right-2 bg-green-500 rounded-full p-3 opacity-0 group-hover:opacity-100 transition hover:scale-105">
+                                <i class="fas fa-play text-black"></i>
+                            </button>
+                        </div>
+                        <h3 class="font-bold">Nombre del álbum</h3>
+                        <p class="text-gray-400 text-sm">Artista</p>
+                    </div>
+                    
+                    </div>
+            </main>
+        </div>
+    </div>
+    
+    <div class="fixed bottom-0 left-0 right-0 bg-gray-900 border-t border-gray-800 p-3 flex items-center justify-between">
+        <div class="flex items-center w-1/4">
+            <img src="https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228" alt="Album cover" class="h-14 w-14 mr-3">
+            <div>
+                <h4 class="font-medium text-sm">Canción</h4>
+                <p class="text-gray-400 text-xs">Artista</p>
+            </div>
+            <button class="ml-4 text-gray-400 hover:text-white">
+                <i class="far fa-heart"></i>
+            </button>
+        </div>
+        
+        <div class="w-2/4">
+            <div class="flex justify-center items-center space-x-6 mb-2">
+                <button class="text-gray-400 hover:text-white">
+                    <i class="fas fa-random"></i>
+                </button>
+                <button class="text-gray-400 hover:text-white">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="bg-white text-black rounded-full p-2 hover:scale-105">
+                    <i class="fas fa-pause"></i>
+                </button>
+                <button class="text-gray-400 hover:text-white">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+                <button class="text-gray-400 hover:text-white">
+                    <i class="fas fa-redo"></i>
+                </button>
+            </div>
+            
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">0:00</span>
+                <div class="h-1 w-full bg-gray-600 rounded-full">
+                    <div class="h-1 bg-gray-400 rounded-full" style="width: 30%"></div>
+                </div>
+                <span class="text-xs text-gray-400">3:45</span>
+            </div>
+        </div>
+        
+        <div class="flex items-center justify-end w-1/4 space-x-3">
+            <button class="text-gray-400 hover:text-white">
+                <i class="fas fa-list"></i>
+            </button>
+            <button class="text-gray-400 hover:text-white">
+                <i class="fas fa-desktop"></i>
+            </button>
+            <button class="text-gray-400 hover:text-white">
+                <i class="fas fa-volume-up"></i>
+            </button>
+            <div class="h-1 w-20 bg-gray-600 rounded-full">
+                <div class="h-1 bg-gray-400 rounded-full" style="width: 70%"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
