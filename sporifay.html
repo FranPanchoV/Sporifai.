@@ -30,40 +30,110 @@
         <div class="bg-white p-[20px] flex lg:hidden"></div>
       </div>
     </nav>
-    <div class="bg-black text-white flex flex-col items-start min-h-24 p-4">
-      <div class="w-1/4 bg-[#121212] p-6 flex-col">
-          <h2 class="text-xl text-white font-bold mb-0">Tu biblioteca</h2>
-          <button class="text-white text-xl">+</button>
-          <div class="bg-[#1f1f1f] text-white p-4 rounded-lg w-full text-left mb-4">
-            <p class="font-bold">Crea tu primer playlist</p>
-            <p class="text-sm text-gray-400">Es muy fácil! Te vamos a ayudar</p>
-            <button class="bg-white text-black font-bold py-2 px-4 rounded-full w-full cursor-pointer  hover:scale-[105%] hover:bg-neutral-200">Crear playlist</button>
+      <main class="flex flex-wrap justify-between px-5">
+        <aside class="bg-[rgb(18,18,18)] top-20 z-10 h-[88vh] w-[400px] rounded-[8px] flex flex-col gap-4 p-2" aria-label="Sidebar">
+          <div class="flex items-between justify-between pb-[20px]">
+            <h2 class="text-white text-lg font-semibold">Tu biblioteca</h2>
+            <p class="text-neutral-400 text-2xl font-bold">+</p>
           </div>
-          <div class="bg-[#1f1f1f] text-white p-4 rounded-lg w-full text-left">
-            <h2 class="font-bold">Busquemos algunos podcasts para seguir</h2>
-            <p class="text-sm text-gray-400">Te mantendremos al tanto de los nuevos episodios</p>
-            <button class="bg-white text-black font-bold py-2 px-4 rounded-full w-full cursor-pointer hover:scale-[105%] hover:bg-neutral-200">Explorar podcasts</button>
+        <section class="flex flex-col gap-4 h-[150px] overflow-y-auto scrollbar-track-[rgb(31,31,31)] hover:scrollbar-thumb-gray-400 scrollbar-thumb-rounded-full scrollbar-thumb-[rgb(31,31,31)] scrollbar-track-rounded-full">
+          <div class="bg-[rgb(31,31,31)] rounded-md p-4 text-white">
+            <h2 class="font-bold mb-2">Crea tu primera playlist</h2>
+            <p class="mb-4">¡Es muy fácil! Te vamos a ayudar</p>
+            <button class="bg-white text-black px-4 py-1 rounded-3xl transition-transform duration-200 hover:scale-105">
+            Crear playlist</button>
           </div>
-
-    <footer class="w-full p-4">
-      <div>
-      <div class="flex flex-wrap gap-2 mb-4 text-xs">
-        <a href="#" class="text-gray-400 hover:text-white">Legal</a>
-        <a href="#" class="text-gray-400 hover:text-white">Seguridad y Centro de Privacidad</a>
-        <a href="#" class="text-gray-400 hover:text-white">Política de Privacidad</a>
-        <a href="#" class="text-gray-400 hover:text-white">Cookies</a>
-        <a href="#" class="text-gray-400 hover:text-white">Sobre los anuncios</a>
-        <a href="#" class="text-gray-400 hover:text-white">Accesibilidad</a>
-      </div>
-      <button class="border bg-[#121212] text-white p-2 rounded-lg w-2x5 h-6 flex items-center justify-center hover:scale-[105%]">
-        <img src="./imagenes/icons8-globo-96.png" alt="Globe" class="w-4 h-4 mr-2">
-        Español de Latinoamérica
-      </button>
-      
+          <div class="bg-[rgb(31,31,31)] rounded-md p-4 text-white">
+            <h2 class="mb-2">Busquemos algunos podcasts para seguir</h2>
+            <p class="mb-4">Te mantendremos al tanto de los nuevos episodios.</p>
+            <button class="bg-white text-black px-4 py-1 rounded-3xl transition-transform duration-200 hover:scale-105">
+            Explorar podcasts
+            </button>
+          </div>
+        </section>
+        <div class="w-full max-w-screen-sm text-xs mt-7 text-white flex flex-wrap gap-x-6 gap-y-3 md:justify-start px-4">
+          <p class="mb-0">Legal</p>
+          <p class="mb-0">Seguridad y Centro de Privacidad</p>
+          <p class="mb-0">Política de Privacidad</p>
+          <p class="mb-0">Cookies</p>
+          <p class="mb-0">Sobre Anuncios</p>
+          <p class="mb-0">Accesibilidad</p>
+          <p class="mb-0">Cookies</p>
+        </div>
+        <div class="w-full flex justify-left">
+          <button class="inline-flex items-center font-medium text-sm mt-6 gap-[4px] text-white border border-white rounded-3xl px-3 py-[3px] hover:scale-105 transition-transform duration-100">
+            <i class=""></i> <span>Español de Latinoamérica</span>
+          </button>
+        </div>          
+        </aside>
+      <!-- Contenido principal -->
+      <div class=" bg-[#121212] flex-1 ml-4 max-w-[88%] rounded-[8px]">
+      <div class=" text-white p-4">
+        <h2 class="text-xl font-bold mb-4">Canciones del momento</h2>
+        <a href="#" class="text-sm text-gray-400 hover:text-white justify-end">Mostrar todo</a>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
+        <div class="flex flex-col items-center">
+            <img src="imagenes/La culpa Track" alt="la culpa (track 11)" class="w-full rounded">
+            <p class="text-sm mt-2">la culpa (track 11)</p>
+            <p class="text-gray-400 text-xs">Alleih, Yorghaki</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="imagenes/Killin it girl" alt="Kill'n It Girl (feat. GloRilla)" class="w-full rounded">
+            <p class="text-sm mt-2">Kill'n It Girl (feat. GloRilla)</p>
+            <p class="text-gray-400 text-xs">j-hope, GloRilla</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="https://via.placeholder.com/150" alt="YO Y TÚ" class="w-full rounded">
+            <p class="text-sm mt-2">YO Y TÚ</p>
+            <p class="text-gray-400 text-xs">Ovy On The Drums, Quevedo, Beéle</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="https://via.placeholder.com/150" alt="quédate" class="w-full rounded">
+            <p class="text-sm mt-2">quédate</p>
+            <p class="text-gray-400 text-xs">Beéle</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="https://via.placeholder.com/150" alt="LOKENECESITAS" class="w-full rounded">
+            <p class="text-sm mt-2">LOKENECESITAS</p>
+            <p class="text-gray-400 text-xs">SAIKO, Omar Courtz</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="https://via.placeholder.com/150" alt="Gohan y Goku" class="w-full rounded">
+            <p class="text-sm mt-2">Gohan y Goku</p>
+            <p class="text-gray-400 text-xs">Arcángel, Austin San</p>
+        </div>
     </div>
-    </footer>
-      </div>
 
-      </div>
-  </body>
+    <h2 class="text-xl font-bold mb-4">Artistas populares</h2>
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-4">
+        <div class="flex flex-col items-center">
+            <img src="imagenes/Bad Bunny" alt="Bad Bunny" class="w-24 h-24 rounded-full">
+            <p class="text-sm mt-2">Bad Bunny</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="imagenes/Karol G" alt="KAROL G" class="w-24 h-24 rounded-full">
+            <p class="text-sm mt-2">KAROL G</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="imagenes/Rauw Alejandro" alt="Rauw Alejandro" class="w-24 h-24 rounded-full">
+            <p class="text-sm mt-2">Rauw Alejandro</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="imagenes/Beele" alt="Beéle" class="w-24 h-24 rounded-full">
+            <p class="text-sm mt-2">Beéle</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="imagenes/Feid" alt="Feid" class="w-24 h-24 rounded-full">
+            <p class="text-sm mt-2">Feid</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="imagenes/Mora" alt="Mora" class="w-24 h-24 rounded-full">
+            <p class="text-sm mt-2">Mora</p>
+        </div>
+    </div>
+    </div>
+</main>
+
+</body>
 </html>
+
