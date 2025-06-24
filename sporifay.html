@@ -11,14 +11,14 @@
       <div class="flex items-center gap-4">
         <img src="imagenes/icons8-spotify.svg" alt="logo">
         <div class="flex items-center gap-1">
-          <div class="bg-zinc-900 p-[20px] rounded-full hover:scale-[105%] hover:bg-zinc-600"></div>
-          <div class="bg-zinc-900 p-[8px] rounded-full flex items-center hover:bg-zinc-600 hidden lg:flex">
+          <div class="bg-zinc-900 p-[20px] rounded-full hover:scale-[105%] hover:bg-zinc-600 sticky"></div>
+          <div class="bg-zinc-900 p-[8px] rounded-full flex items-end-safe hover:bg-zinc-600 hidden lg:flex">
             <input type="text" placeholder="¿Qué quieres reproducir?" class="text-gray-200 outline-none w-[200px]">
           </div>
         </div>
       </div>
       <div class="flex items-center gap-4">
-        <div class="flex items-center gap-2 hidden lg:flex">
+        <div class="flex items-center gap-2 hidden lg:flex sticky top-0">
           <p class="text-neutral-400 font-semibold hover:text-white text-lg cursor-pointer">Premium</p>
           <p class="text-neutral-400 font-semibold hover:text-white text-lg cursor-pointer">Asistencia</p>
           <p class="text-neutral-400 font-semibold hover:text-white text-lg cursor-pointer">Descargar</p>
@@ -31,104 +31,153 @@
       </div>
     </nav>
       <main class="flex flex-wrap justify-between px-5">
-        <aside class="bg-[rgb(18,18,18)] top-20 z-10 h-[88vh] w-[400px] rounded-[8px] flex flex-col gap-4 p-2" aria-label="Sidebar">
-          <div class="flex items-between justify-between pb-[20px]">
-            <h2 class="text-white text-lg font-semibold">Tu biblioteca</h2>
-            <p class="text-neutral-400 text-2xl font-bold">+</p>
-          </div>
-        <section class="flex flex-col gap-10 h-[150px] overflow-y-auto scrollbar-track-[rgb(31,31,31)] hover:scrollbar-thumb-gray-400 scrollbar-thumb-rounded-full scrollbar-thumb-[rgb(31,31,31)] scrollbar-track-rounded-full">
-          <div class="bg-[rgb(31,31,31)] rounded-md p-4 text-white">
-            <h2 class="font-bold mb-2">Crea tu primera playlist</h2>
-            <p class="mb-4">¡Es muy fácil! Te vamos a ayudar</p>
-            <button class="bg-white text-black px-4 py-1 rounded-3xl transition-transform duration-200 hover:scale-105">
-            Crear playlist</button>
-          </div>
-          <div class="bg-[rgb(31,31,31)] rounded-md p-4 text-white">
-            <h2 class="mb-2">Busquemos algunos podcasts para seguir</h2>
-            <p class="mb-4">Te mantendremos al tanto de los nuevos episodios.</p>
-            <button class="bg-white text-black px-4 py-1 rounded-3xl transition-transform duration-200 hover:scale-105">
-            Explorar podcasts
-            </button>
-          </div>
-        </section>
-        <div class="w-full max-w-screen-sm text-xs mt-7 text-white flex flex-wrap gap-x-6 gap-y-3 md:justify-start px-4">
-          <p class="mb-0">Legal</p>
-          <p class="mb-0">Seguridad y Centro de Privacidad</p>
-          <p class="mb-0">Política de Privacidad</p>
-          <p class="mb-0">Cookies</p>
-          <p class="mb-0">Sobre Anuncios</p>
-          <p class="mb-0">Accesibilidad</p>
-          <p class="mb-0">Cookies</p>
-        </div>
-        <div class="w-full flex justify-left">
-          <button class="inline-flex items-center font-medium text-sm mt-6 gap-[4px] text-white border border-white rounded-3xl px-3 py-[3px] hover:scale-105 transition-transform duration-100">
-            <i class=""></i> <span>Español de Latinoamérica</span>
-          </button>
-        </div>          
-        </aside>
+    <aside class="bg-[rgb(18,18,18)] top-20 z-10 h-[88vh] w-[400px] rounded-[8px] flex flex-col p-2 sticky" aria-label="Sidebar">
+  <!-- Header de la biblioteca -->
+  <div class="flex justify-between items-center pb-[20px]">
+    <h2 class="text-white text-lg font-semibold">Tu biblioteca</h2>
+    <p class="text-neutral-400 text-2xl font-bold hover:text-white cursor-pointer">+</p>
+  </div>
+  
+  <!-- Sección de contenido principal -->
+  <section class="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
+    <div class="flex flex-col gap-5">
+      <div class="bg-[rgb(31,31,31)] rounded-md p-4 text-white">
+        <h2 class="font-bold mb-2">Crea tu primera playlist</h2>
+        <p class="mb-4 text-sm">¡Es muy fácil! Te vamos a ayudar</p>
+        <button class="bg-white text-black px-4 py-1.5 rounded-full text-sm font-medium transition-transform duration-200 hover:scale-105">Crear playlist</button>
+      </div>
+      
+      <div class="bg-[rgb(31,31,31)] rounded-md p-4 text-white">
+        <h2 class="font-bold mb-2">Busquemos algunos podcasts para seguir</h2>
+        <p class="mb-4 text-sm">Te mantendremos al tanto de los nuevos episodios.</p>
+        <button class="bg-white text-black px-4 py-1.5 rounded-full text-sm font-medium transition-transform duration-200 hover:scale-105">Explorar podcasts</button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer fijo en la parte inferior -->
+  <footer class="mt-auto pt-4 border-t border-[rgb(40,40,40)]">
+    <div class="flex flex-wrap gap-y-2 gap-x-4 mb-4 text-xs">
+      <a href="#" class="text-gray-400 hover:text-white hover:underline">Legal</a>
+      <a href="#" class="text-gray-400 hover:text-white hover:underline">Seguridad y Centro de Privacidad</a>
+      <a href="#" class="text-gray-400 hover:text-white hover:underline">Política de Privacidad</a>
+      <a href="#" class="text-gray-400 hover:text-white hover:underline">Cookies</a>
+      <a href="#" class="text-gray-400 hover:text-white hover:underline">Sobre los anuncios</a>
+      <a href="#" class="text-gray-400 hover:text-white hover:underline">Accesibilidad</a>
+    </div>
+    
+    <button class="inline-flex items-center font-medium text-xs gap-2 text-white border border-white rounded-full px-4 py-1.5 hover:scale-105 transition-transform mb-2">
+      <img src="imagenes/icons8-globo-24.png" alt="globo">
+      <i class=" text-xs"></i>
+      <span>Español de Latinoamérica</span>
+    </button>
+  </footer>
+</aside>
+
       <!-- Contenido principal -->
       <div class=" bg-[#121212] flex-1 ml-4 max-w-[88%] rounded-[8px]">
-      <div class=" text-white p-4">
-        <h2 class="text-xl font-bold mb-4">Canciones del momento</h2>
-        <a href="#" class="text-sm text-gray-400 hover:text-white justify-end">Mostrar todo</a>
-      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
+      <div class="flex items-baseline justify-between">
+            <h1 class="text-white font-bold text-2xl hover:underline cursor-pointer p-4">Canciones del momento</h1>
+            <p class="text-neutral-400 font-semibold text-base hover:underline cursor-pointer">Mostrar todo</p>
+          </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-10 p-6">
         <div class="flex flex-col items-center">
-            <img src="imagenes/La culpa Track" alt="la culpa (track 11)" class="w-full rounded">
-            <p class="text-sm mt-2">la culpa (track 11)</p>
-            <p class="text-gray-400 text-xs">Alleih, Yorghaki</p>
+            <img src="imagenes/La culpa Track" alt="la culpa (track 11)" class="w-60 rounded">
+            <p class="text-white text-sm mt-2">la culpa (track 11)</p>
+            <p class="text-white text-xs">Alleih, Yorghaki</p>
         </div>
         <div class="flex flex-col items-center">
-            <img src="imagenes/Killin it girl" alt="Kill'n It Girl (feat. GloRilla)" class="w-full rounded">
-            <p class="text-sm mt-2">Kill'n It Girl (feat. GloRilla)</p>
-            <p class="text-gray-400 text-xs">j-hope, GloRilla</p>
+            <img src="imagenes/Killin it girl" alt="Kill'n It Girl (feat. GloRilla)" class="w-60 rounded">
+            <p class="text-white text-sm mt-2">Kill'n It Girl (feat. GloRilla)</p>
+            <p class="text-white text-xs">j-hope, GloRilla</p>
         </div>
         <div class="flex flex-col items-center">
-            <img src="https://via.placeholder.com/150" alt="YO Y TÚ" class="w-full rounded">
-            <p class="text-sm mt-2">YO Y TÚ</p>
-            <p class="text-gray-400 text-xs">Ovy On The Drums, Quevedo, Beéle</p>
+            <img src="imagenes/Ovy On The Drums, Quevedo, Beéle.jfif" alt="YO Y TÚ" class="w-60 rounded">
+            <p class="text-white text-xs">Ovy On The Drums, Quevedo, Beéle</p>
         </div>
         <div class="flex flex-col items-center">
-            <img src="https://via.placeholder.com/150" alt="quédate" class="w-full rounded">
-            <p class="text-sm mt-2">quédate</p>
-            <p class="text-gray-400 text-xs">Beéle</p>
+            <img src="imagenes/Quedate, Bele.png" alt="quédate" class="w-60 rounded">
+            <p class="text-white text-sm mt-2">quédate</p>
+            <p class="text-white text-xs">Beéle</p>
         </div>
         <div class="flex flex-col items-center">
-            <img src="https://via.placeholder.com/150" alt="LOKENECESITAS" class="w-full rounded">
-            <p class="text-sm mt-2">LOKENECESITAS</p>
-            <p class="text-gray-400 text-xs">SAIKO, Omar Courtz</p>
+            <img src="imagenes/LOKENECESITAS.jfif" alt="LOKENECESITAS" class="w-60 rounded">
+            <p class="text-white text-sm mt-2">LOKENECESITAS</p>
+            <p class="text-white text-xs">SAIKO, Omar Courtz</p>
         </div>
         <div class="flex flex-col items-center">
-            <img src="https://via.placeholder.com/150" alt="Gohan y Goku" class="w-full rounded">
-            <p class="text-sm mt-2">Gohan y Goku</p>
-            <p class="text-gray-400 text-xs">Arcángel, Austin San</p>
+            <img src="imagenes/Gohan y Goku.jfif" alt="Gohan y Goku" class="w-60 rounded">
+            <p class="text-white text-sm mt-2">Gohan y Goku</p>
+            <p class="text-white text-xs">Arcángel, Austin San</p>
         </div>
     </div>
 
-    <h2 class="text-xl font-bold mb-4">Artistas populares</h2>
+    <h2 class="text-white text-xl font-bold mb-4 p-4">Artistas populares</h2>
     <div class="grid grid-cols-3 md:grid-cols-6 gap-4">
         <div class="flex flex-col items-center">
             <img src="imagenes/Bad Bunny" alt="Bad Bunny" class="w-24 h-24 rounded-full">
-            <p class="text-xs mt-2">Bad Bunny</p>
+            <p class="text-white text-xs mt-2">Bad Bunny</p>
+            <p class="text-white text-xs mt-2">Artista</p>
         </div>
         <div class="flex flex-col items-center">
             <img src="imagenes/Karol G" alt="KAROL G" class="w-24 h-24 rounded-full">
-            <p class="text-sm mt-2">KAROL G</p>
+            <p class="text-white text-sm mt-2">KAROL G</p>
+            <p class="text-white text-xs mt-2">Artista</p>
         </div>
         <div class="flex flex-col items-center">
             <img src="imagenes/Rauw Alejandro" alt="Rauw Alejandro" class="w-24 h-24 rounded-full">
-            <p class="text-sm mt-2">Rauw Alejandro</p>
+            <p class=" text-white text-sm mt-2">Rauw Alejandro</p>
+            <p class="text-white text-xs mt-2">Artista</p>
         </div>
         <div class="flex flex-col items-center">
             <img src="imagenes/Beele" alt="Beéle" class="w-24 h-24 rounded-full">
-            <p class="text-sm mt-2">Beéle</p>
+            <p class=" text-white text-sm mt-2">Beéle</p>
+            <p class="text-white text-xs mt-2">Artista</p>
         </div>
         <div class="flex flex-col items-center">
             <img src="imagenes/Feid" alt="Feid" class="w-24 h-24 rounded-full">
-            <p class="text-sm mt-2">Feid</p>
+            <p class="text-white text-sm mt-2">Feid</p>
+            <p class="text-white text-xs mt-2">Artista</p>
         </div>
         <div class="flex flex-col items-center">
             <img src="imagenes/Mora" alt="Mora" class="w-24 h-24 rounded-full">
-            <p class="text-sm mt-2">Mora</p>
+            <p class="text-white text-sm mt-2">Mora</p>
+            <p class="text-white text-xs mt-2">Artista</p>
+        </div>
+    </div>
+    <div class="flex items-baseline justify-between">
+            <h1 class="text-white font-bold text-2xl hover:underline cursor-pointer p-4">Lo mas escuchado</h1>
+            <p class="text-neutral-400 font-semibold text-base hover:underline cursor-pointer">Mostrar todo</p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-10 p-6">
+        <div class="flex flex-col items-center">
+            <img src="imagenes/La culpa Track" alt="la culpa (track 11)" class="w-60 rounded">
+            <p class="text-white text-sm mt-2">la culpa (track 11)</p>
+            <p class="text-white text-xs">Alleih, Yorghaki</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="imagenes/Killin it girl" alt="Kill'n It Girl (feat. GloRilla)" class="w-60 rounded">
+            <p class="text-white text-sm mt-2">Kill'n It Girl (feat. GloRilla)</p>
+            <p class="text-white text-xs">j-hope, GloRilla</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="imagenes/Ovy On The Drums, Quevedo, Beéle.jfif" alt="YO Y TÚ" class="w-60 rounded">
+            <p class="text-white text-xs">Ovy On The Drums, Quevedo, Beéle</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="imagenes/Quedate, Bele.png" alt="quédate" class="w-60 rounded">
+            <p class="text-white text-sm mt-2">quédate</p>
+            <p class="text-white text-xs">Beéle</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="imagenes/LOKENECESITAS.jfif" alt="LOKENECESITAS" class="w-60 rounded">
+            <p class="text-white text-sm mt-2">LOKENECESITAS</p>
+            <p class="text-white text-xs">SAIKO, Omar Courtz</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="imagenes/Gohan y Goku.jfif" alt="Gohan y Goku" class="w-60 rounded">
+            <p class="text-white text-sm mt-2">Gohan y Goku</p>
+            <p class="text-white text-xs">Arcángel, Austin San</p>
         </div>
     </div>
     </div>
